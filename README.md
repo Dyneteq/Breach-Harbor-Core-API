@@ -69,6 +69,25 @@ npm run start
 
 ## Roadmap
 
+### Features 
+
+- Notifications
+  - View
+  - Delete
+  - Multiple mark to delete
+  - Mark as read
+- Search 
+  - IP Address DB
+  - Incidents
+  - Collectors
+- Group 
+  - Incidents
+- Add IP Address signs for statuses (anon, tor node etc.)
+- Add UserActivity log
+- Fix recent searches in IP Address View
+
+### System
+
 - Setup PostgreSQL
 - Setup Docker
 - Increase Test coverage
