@@ -10,7 +10,6 @@ import UserProfile from './user/UserProfile';
 import './App.css';
 import ResetPasswordForm from './user/ResetPasswordForm';
 import RequestPasswordResetForm from './user/RequestPasswordResetForm';
-import LandingPage from './pages/LandingPage';
 import Dashboard from './dashboard/Dashboard';
 import IPAddressView from './ip-address/IPAddressView';
 import CollectorList from './collector/CollectorList';
@@ -27,7 +26,7 @@ function App() {
         <AuthProvider>
           <Alert />
           <Routes>
-            <Route path="/" element={<LandingPage />} />
+            <Route path="/" element={<LoginForm />} />
             <Route path="/login" element={<LoginForm />} />
             <Route path="/register" element={<RegisterForm />} />
             <Route path="/verify/:token" element={<EmailVerification />} />

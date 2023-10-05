@@ -51,7 +51,7 @@ For the server, in `/breach_harbor_core` run:
 
 ```bash
 source .venv/bin/activate
-python manage.py runserver
+python manage.py runserver 0.0.0.0:8000
 
 ```
 

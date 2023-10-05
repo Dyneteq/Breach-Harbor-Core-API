@@ -8,18 +8,21 @@ const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const { setAuth } = useContext(AuthContext);
+  const { auth, setAuth } = useContext(AuthContext);
   const { setAlert } = useContext(AlertContext);
 
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
+    if (auth.access) {
+      navigate('/dashboard');
+    }
     if (location.state?.message) {
       setAlert({ message: location.state.message, type: location.state.type || 'warning' });
       setTimeout(() => setAlert({ message: '', type: '' }), 3000);
     }
-  }, [location, setAlert]);
+  }, [location, setAlert, auth, navigate]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
