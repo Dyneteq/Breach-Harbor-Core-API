@@ -15,7 +15,7 @@ const LoginForm = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (auth.access) {
+    if (auth && auth.access) {
       navigate('/dashboard');
     }
     if (location.state?.message) {

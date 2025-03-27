@@ -32,7 +32,7 @@ JWT_SECRET="sDHdbtN763c8cSgnOGMok52IYZmYUlD7JaUdZZPAh47eseHfTK"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000'

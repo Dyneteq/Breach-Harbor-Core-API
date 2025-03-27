@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 class IncidentService:
     @staticmethod 
     def get_all_by_user(user, limit): 
-        return Incident.objects.filter(user=user)[:int(limit)]
+        return Incident.objects.filter(user=user).order_by('-happened_at')[:int(limit)]
         
     @staticmethod
     def verify_user_collector(data, token) -> bool:
